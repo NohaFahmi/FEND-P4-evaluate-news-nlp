@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title> News Evaluation With NLP </title>
+        
+    </head>
+
+    <body>
+
+        <header>
+            <div class="logo-container">
+                <img class="logo" src="images/NLP_logo-1024x585.jpg" />
+            </div>
+             <div class="nav-bar">
+                <nav>
+                    <li><a href='#about'>About</a></li>
+                    <li><a href='https://github.com/NohaaAa/Udacity-Front-End-Development-Nanodegree-projects/tree/master/evaluate-news-nlp-%20Project%204' target="_blank">GitHub-Repo</a></li>
+                    
+                 </nav>
+            </div> 
+        </header>
+
+        <main>
+
+            <h1>Evaluate News App With NLP</h1>
+            <section id="about" class="intro-sec">
+                <p class="intro para-1">This tool allows You to run Natural Language 
+                Processing (NLP) on articles or blogs found on other websites</p>
+
+                <p class="intro para-2"> This tool will give You back pertinent information about the article, like whether the content is subjective (opinion) or objective (fact-based) and whether it is positive, neutral, or negative in tone.</p>
+
+                <p class="intro para-3">This app is built using Aylien Text Analysis API which is a package of Natural Language Processing and Machine Learning-powered APIs for analyzing and extracting various kinds of information from textual content.</p>
+           </section>
+            
+            
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    
+                    <input id="url" type="url" name="article_url" value="" placeholder="Enter a Valid URL">
+                    
+                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </form>
+          
+
+                <section class="url-results">
+                    <strong>Form Results:</strong>
+                     
+                    <ul>
+                        <li>
+                            <h3>Text Polarity:</h3>
+                            <p id="polarity"></p>
+                            <h4>Confidence: </h4>
+                            <p id="polarity_confidence"></p>
+                        </li>
+    
+                        <li>
+                            <h3>Text Subjectivity:</h3>
+                            <p id="subjectivity"></p>
+                            <h4>Confidence: </h4>
+                            <p id="subjectivity_confidence"></p>
+                        </li>
+    
+                        <h3>Text Excerpt:</h3>
+                        <p id="excerpt"></p>
+                    </ul>
+                </section>
+             
+        </main>
+
+        <footer>
+            <p>This Project is created for Udacity FEND by <a href="">Noha M.</a></p>
+        </footer>
+
+        <script>
+            if ('serviceWorker' in navigator) {
+                
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                    console.log('service worker is working');
+                });
+           }
+        </script>
+    
+    </body>
+</html>
